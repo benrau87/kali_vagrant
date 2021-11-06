@@ -64,7 +64,6 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
      git clone https://gitlab.blueteamlab.org/root/os_scripts && cd os_scripts && chmod +x install.sh && sudo ./install.sh
    SHELL
 end
